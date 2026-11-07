@@ -37,7 +37,7 @@ public sealed class PollingWorker(ITelegramBotClient client, UpdateHandler handl
             }
             catch (Exception error)
             {
-                // SDK HTTP errors may contain the token in their URL: never log exception text.
+                // URL в исключении SDK может содержать токен.
                 logger.LogWarning("Polling paused after {Type}.", error.GetType().Name);
                 var delay = error is BotTransportException { RetryAfter: { } retry } ? retry : TimeSpan.FromSeconds(5);
                 try { await Task.Delay(delay, stoppingToken); }

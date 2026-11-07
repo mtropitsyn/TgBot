@@ -5,7 +5,7 @@ using TgBroadcast.Data;
 
 namespace TgBroadcast.Services;
 
-// One running bot instance owns this store. Serialize short writes, never network calls.
+// Запись в SQLite сериализуется внутри одного экземпляра бота.
 public sealed class BotStore(IDbContextFactory<BotDbContext> factory, BotOptions options, TimeProvider time)
 {
     private readonly SemaphoreSlim writeLock = new(1, 1);
