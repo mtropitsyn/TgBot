@@ -1,0 +1,15 @@
+services:
+  bot:
+    build: .
+    init: true
+    restart: unless-stopped
+    stop_grace_period: 30s
+    environment:
+      Bot__Token: ${BOT_TOKEN:?Set BOT_TOKEN in .env}
+      Bot__AdminUserId: ${BOT_ADMIN_USER_ID:?Set BOT_ADMIN_USER_ID in .env}
+      Bot__DatabasePath: /app/data/tgbroadcast.db
+    volumes:
+      - bot-data:/app/data
+
+volumes:
+  bot-data:

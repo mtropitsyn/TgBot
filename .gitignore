@@ -1,0 +1,31 @@
+# IDE and .NET output
+**/.vs/
+**/.idea/
+**/bin/
+**/obj/
+*.user
+*.suo
+TestResults/
+**/TestResults/
+.artifacts/
+
+# Runtime data and configuration
+/data/
+*.db
+*.db-shm
+*.db-wal
+*.sqlite*
+*.log
+.env
+.env.*
+!.env.example
+appsettings.Local.json
+**/subscribers.json
+**/telegram_users.json
+
+# Python legacy / OS files
+__pycache__/
+*.py[cod]
+.venv/
+.DS_Store
+Thumbs.db

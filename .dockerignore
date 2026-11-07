@@ -1,0 +1,13 @@
+.git
+.vs
+**/bin
+**/obj
+**/.vs
+tests
+TestResults
+.artifacts
+data
+.env*
+**/*.db*
+**/subscribers.json
+**/telegram_users.json
