@@ -28,7 +28,6 @@ dotnet run --project src/TgBroadcast
 База `data/tgbroadcast.db` создаётся при первом запуске.
 Вместо user secrets можно задать переменные окружения `Bot__Token` и `Bot__AdminUserId`.
 
-У исходной Python-версии токен был записан в коде. Он остался в истории Git, поэтому перед запуском его нужно заменить через BotFather.
 
 ## Docker
 
